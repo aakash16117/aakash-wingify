@@ -81,6 +81,16 @@ window._pcq.push(['tag', 'person_name', 'test']);
 </script>
 
 <style>
+ @media only screen and (max-width: 480px) and (display-mode: standalone) and (pointer:coarse) and (-webkit-device-pixel-ratio: 2) {
+  @supports (-webkit-touch-callout: none) {
+    .pushcrew-branding-mobile,
+    .pushcrew-buttons-panel {
+        margin-bottom: 20px !important;
+        margin-left: -5px !important;
+    }
+  }
+}
+
 .button {
     background-color: #4CAF50;
     border: none;
@@ -160,6 +170,14 @@ f=false,w=window,d=document,vwoCodeEl=d.querySelector('#vwoCode'),code={use_exis
     </aside>
 
     <h1>Pushcrew</h1>
+
+ <div class="pushcrew-buttons-panel">
+              <button id="pushcrew-mobile_dontallow_button" class="pushcrew-mobile-button-outline"> defaultTexts.BLOCK_BUTTON_TEXT </button>
+                     <button id="pushcrew-mobile_allow_button" class="pushcrew-mobile-button-fill">defaultTexts.ALLOW_BUTTON_TEXT </button>
+       </div>;
+ 
+
+ 
     <p>On clicking Add to cart button, you will become the part of trigger campaign</p>
     <p>After 5 min, you will get a notification</p>
     <p>On clicking Checkout, you will be a converted subscriber of trigger campaign</p>
